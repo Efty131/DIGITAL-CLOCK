@@ -8,9 +8,23 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+      background: linear-gradient(-45deg, #2438e7, #59e73c, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+  }
   
-  background: linear-gradient(115deg, #00004d     25%,  #00001a 75%);
-}
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
 
 .datetime{
   color: rgb(255, 255, 255);
@@ -18,7 +32,7 @@ body{
   font-family: "Segoe UI", sans-serif;
   width: 340px;
   padding: 15px 10px;
-  border: 3px solid #2E94E3;
+  border: 3px solid #25daf1;
   border-radius: 15px;
   -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
   transition: 0.5s;
