@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lan="en">
-    <head>
-        <title>Analog Clock</title>
-        <link rel="stylesheet" href="analog.css">
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    </head>
-    <body>
-        <a href="Digital.html" class="text-right"><h1>DIGITAL CLOCK</h1></a>
-        <h1>Analog Clock</h1>
-        <div class="clock">
-            <div class="hour" id="hour">
-                <div class="hr" id="hr"></div>
-            </div>
-            <div class="min" id="min">
-                <div class="mn" id="mn"></div>
-            </div>
-            <div class="sec" id="sec">
-                <div class="sc" id="sc"></div>
-            </div>
-        </div>
-        
-<script type="text/javascript">
-const deg = 6;
-const hr = document.querySelector("#hr");
-const mn = document.querySelector("#mn");
-const sc = document.querySelector("#sc");
-setInterval(() => {
-    let day = new Date();
-    let hh = day.getHours() * 30;
-    let mn = day.getMinutes() * deg;
-    let ss = day.getSeconds() * deg;
-    hr.style.transform = 'rotateZ(${hh+(mm/12)}deg)';
-    mn.style.transform = 'rotateZ(${mm}deg)';
-    sc.style.transform = 'rotateZ(${ss}deg)';
-})
-</script>
-    </body>
+  <head>
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="analog.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+      <div class="text">
+    <a href="Digital.html" class="text-right">DIGITAL CLOCK</a>
+    <P>Analog Clock</P>
+</div>
+    <div class="clock">
+      <div class="hour" id="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min" id="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec" id="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      const deg = 6;
+      const hr = document.querySelector("#hr");
+      const mn = document.querySelector("#mn");
+      const sc = document.querySelector("#sc");
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+      }, 1000);
+    </script>
+  </body>
 </html>
